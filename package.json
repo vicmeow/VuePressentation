@@ -1,0 +1,21 @@
+{
+  "name": "vuepressentation",
+  "version": "1.0.0",
+  "description": "Presentation slides made with VuePress",
+  "author": "Victoria Bergquist",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vicbergquist/codesandbox-vuepress"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vuepress": "^1.0.0-alpha.48",
+    "vuepress-plugin-clean-urls": "^1.0.3"
+  }
+}
