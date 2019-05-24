@@ -17,7 +17,11 @@ h1, h2, h3, h4
 
 a, a:visited
   color: $textColor
-  border-bottom: 2px dashed transparent
+  text-decoration: none
+  outline: 0
+  border-bottom: 7px dashed $accentColor
+  &:hover, &:focus
+    border-bottom: 7px dashed $textColor
 
 p
   margin-top: .5rem
@@ -42,11 +46,6 @@ button
 button:focus
   outline: 0
   border-bottom: 2px dashed white
-  
-a, a:focus, a:hover
-  text-decoration: none
-  outline: 0
-  border-bottom: 4px dashed $accentColor
 
 .nav
   position: fixed
