@@ -26,23 +26,18 @@
       </transition>
     </main>
     
-    <component :is="footer" :progress="progress" :isFullscreen="isFullscreen"/>
+    <component :is="footer" :isFullscreen="isFullscreen"/>
   </div>
 </template>
 
 <script>
 import Navigation from '../components/Navigation'
-import ProgressBar from "../components/ProgressBar"
-import BaseFooter from '../components/BaseFooter'
 import SlideFooter from '../components/SlideFooter'
-import { isNumber } from 'util';
 const TopicLayout = () => import('../layouts/TopicLayout')
 const IntroLayout = () => import('../layouts/IntroLayout')
 export default {
   components: {
-    ProgressBar,
     Navigation,
-    BaseFooter,
     SlideFooter,
     TopicLayout,
     IntroLayout
