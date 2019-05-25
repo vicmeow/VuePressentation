@@ -25,8 +25,7 @@
         <component :is="layout" :key="$page.path"/>
       </transition>
     </main>
-    
-    <component :is="footer" :isFullscreen="isFullscreen"/>
+    <component :is="'SlideFooter'" :isFullscreen="isFullscreen"/>
   </div>
 </template>
 
@@ -72,15 +71,17 @@ export default {
       }
     },
     toNext() {
-      if(this.$page.path.match(/slides/g)) {
+      console.log(this.$frontmatter.next)
+      const regex = /slides/g
+      if(this.$frontmatter.next) {
+        this.$router.push(this.$frontmatter.next)
+      }
+      if(regex.test(this.$page.path)) {
         // if slide path is more than available slides, return home
         const next = this.slidePath === this.slides 
           ? '/'
           : '/slides/' + (this.slidePath + 1)
         this.$router.push(next)
-      }  
-      if(this.$frontmatter.next) {
-        this.$router.push(this.$frontmatter.next)
       }
     }
   },
@@ -114,12 +115,6 @@ export default {
       const totalSlides = this.$site.pages.length;
       const pct = totalSlides / 100;
       return pct;
-    },
-    footer() {
-      if(this.$page.path === '/' || this.$page.path.match(/slides/g)) {
-        return 'slide-footer'
-      }
-      return 'base-footer'
     }
   },
   mounted() {
