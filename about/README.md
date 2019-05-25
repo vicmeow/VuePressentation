@@ -1,10 +1,6 @@
 ---
 prev: /
-next: /slides/2
-topic: Who am I? 🦄
+next: /slides/1
 ---
 
-<div style="display: flex; align-items: center; text-align: left;">
-<img src="/victoria.jpg" style="max-width: 200px;">
-Victoria 🦄// Frontend Developer
-</div>
+<speaker-profile speaker="Victoria 🦄" title="Frontend Developer // Cat Mom" :activities="['Vue.js Frankfurt 😺', 'Vue Vixens DE 🦊']" img="/victoria.jpg" twitter="@vicbergquist"/>
