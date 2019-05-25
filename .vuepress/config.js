@@ -12,7 +12,7 @@ module.exports = {
     nav: [
       { text: "Home", link: "/" }
     ],
-    globalHashtags: ['vuejsroadtrip', 'vuepress']
+    globalHashtags: ['vuejsamsterdam', 'vuepress']
   },
   markdown: {
     anchor: {
