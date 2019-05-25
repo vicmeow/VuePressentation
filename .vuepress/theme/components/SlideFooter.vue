@@ -2,6 +2,7 @@
   <footer class="footer slide-footer">
     <a class="control-link" v-if="!isFullscreen" :class="{ hidden: isFullscreen }" :href="$frontmatter.prev">Previous</a>
     <div v-if="$page.path !== '/'">
+      <span class="hashtag">@vicbergquist</span>
       <span class="hashtag" v-for="hashtag in hashtags">#{{ hashtag }}</span>
     </div>
     <div v-if="$frontmatter.event || $frontmatter.date">
